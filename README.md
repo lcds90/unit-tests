@@ -7,9 +7,9 @@ Bem-vindo à documentação de testes unitários para o seu projeto Vue 3 utiliz
 Este repositório contém exemplos e guias para a criação e execução de testes unitários em aplicações Vue 3 usando Vitest. 
 
 Sobre as ferramentas utilizadas
-- **Vue Test Utils**: 
-- **Jest**: Framework de testes.
+- **Jest**: Framework de teste com foco em simplicidade.
 - **Vitest**: é um framework de testes rápido e moderno, inspirado no Jest, mas otimizado para o ecossistema Vite.
+- **Vue Test Utils**: Ferramenta específica para testar componentes Vue.js.
 
 ## 📦 Instalação
 
@@ -118,6 +118,11 @@ shallowMount:
 ### 🔄 Qual é o objetivo deles?
 
 Ambos criam instâncias de componentes que podem ser manipuladas e inspecionadas durante os testes.
+Com o wrapper, você pode simular interações do usuário, acessar e modificar o estado do componente, e verificar saídas e comportamentos esperados.
 A API de "expect" é utilizada para o resultado esperado do componente.
 
 ---
+
+Referências
+
+- 

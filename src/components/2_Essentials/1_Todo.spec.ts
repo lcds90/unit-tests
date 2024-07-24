@@ -1,5 +1,5 @@
 import { mount } from '@vue/test-utils';
-import TodoApp from './Todo.vue';
+import TodoApp from './1_Todo.vue';
 import { describe, expect, it } from 'vitest';
 
 describe('todo tests', () => {

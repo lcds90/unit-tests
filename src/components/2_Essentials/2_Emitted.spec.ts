@@ -1,6 +1,6 @@
 import { mount } from '@vue/test-utils';
 import { describe, expect, it } from 'vitest';
-import Counter from './Emitted.vue';
+import Counter from './2_Emitted.vue';
 
 describe('emit tests', () => {
 	it("should emit an event 'change' when clicked", () => {
