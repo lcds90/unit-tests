@@ -21,7 +21,7 @@
 		];
 	};
 
-	defineExpose({ todos });
+	defineExpose({ todos, newTodo });
 </script>
 
 <template>

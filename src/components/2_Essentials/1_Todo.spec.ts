@@ -13,12 +13,13 @@ describe('todo tests', () => {
 	it('should add todo', async () => {
 		const wrapper = mount(TodoApp);
 		expect(wrapper.findAll('[data-test="todo"]')).toHaveLength(1);
-
+		
 		// LINK https://test-utils.vuejs.org/guide/advanced/async-suspense.html#Asynchronous-Behavior
+		console.log(wrapper.vm.newTodo)
 		await wrapper.get('[data-test="new-todo"]').setValue('New todo');
+		console.log(wrapper.vm.newTodo)
 		await wrapper.get('[data-test="form"]').trigger('submit');
     expect(wrapper.findAll('[data-test="todo"]')).toHaveLength(2);
-    
     console.log('Utilize defineExpose na composition API para expor dados que precisam ser testados do script')
     console.log(wrapper.vm.todos);
     expect(wrapper.vm.todos.length).toBe(2)

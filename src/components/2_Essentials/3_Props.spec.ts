@@ -8,13 +8,13 @@ describe('props test', () => {
     // LINK https://test-utils.vuejs.org/guide/essentials/passing-data.html
     const wrapper = mount(Password, {
       props: {
-        minLength: 10
+        minLength: 10,
+        greeting: false,
       },
     })
     await wrapper.get('input').setValue('short');
     console.log(wrapper.html())
     expect(wrapper.html()).toContain('Password must be at least 10 characters')
-    // LINK https://test-utils.vuejs.org/guide/essentials/conditional-rendering.html#Using-isVisible-
     expect(wrapper.find('[data-test="error"]').isVisible()).toBeTruthy()
     expect(wrapper.find('[data-test="error"]').classes()).toContain('has-text-danger')
   })

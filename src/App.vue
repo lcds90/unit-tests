@@ -5,5 +5,12 @@
 
 <template>
 	<Todo />
+	<hr style="margin-block: 25px"/>
 	<ApiExample />
 </template>
+
+<style>
+body {
+	background: grey;
+}
+</style>

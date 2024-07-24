@@ -4,6 +4,7 @@ import { ref } from 'vue';
 const emit = defineEmits(['change', 'batata']);
 const count = ref(0);
 const onClick = () => {
+    count.value += 1
     emit('change', { count: count.value })
 }
 const onDblClick = () => {

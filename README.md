@@ -123,6 +123,4 @@ A API de "expect" é utilizada para o resultado esperado do componente.
 
 ---
 
-Referências
-
-- 
+# Referências

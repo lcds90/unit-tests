@@ -13,15 +13,16 @@ describe('emit tests', () => {
 	});
 
 	
-	it("should emit an three event 'change' when clicked three times", () => {
+	it("should emit an three event 'change' when clicked three times", async () => {
 		const wrapper = mount(Counter);
 
-		wrapper.find('button').trigger('click');
-		wrapper.find('button').trigger('click');
+		await wrapper.find('button').trigger('click');
+		await wrapper.find('button').trigger('click');
+
 		const changeEvent = wrapper.emitted('change') as any
 		expect(changeEvent).toHaveLength(2)
-		expect(changeEvent[0][0]).toEqual({ count: 0 })
-		expect(changeEvent[1][0]).toEqual({ count: 0 })
+		expect(changeEvent[0][0]).toEqual({ count: 1 })
+		expect(changeEvent[1][0]).toEqual({ count: 2 })
 	});
 	
 it('should emit an event \'batata\' when double clicked', () => {

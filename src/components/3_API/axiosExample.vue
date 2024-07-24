@@ -1,5 +1,5 @@
 <template>
-	<button @click="getPosts">Get posts</button>
+	<button class="button" @click="getPosts">Get posts</button>
 	<ul>
 		<li
 			v-for="post in posts"
@@ -27,6 +27,13 @@
 		const { data } = await axios.get(
 			'https://jsonplaceholder.typicode.com/todos'
 		);
+		console.log(data)
 		posts.value = data;
 	};
 </script>
+
+<style>
+.button {
+	margin-top: 25px;
+}
+</style>

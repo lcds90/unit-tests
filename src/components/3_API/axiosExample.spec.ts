@@ -12,6 +12,7 @@ vi.mock('axios')
 it('loads posts on button click', async () => {
   const wrapper = mount(PostList)
   const mockedFetch = vi.mocked(axios, true)
+  
   mockedFetch.get.mockResolvedValue({ data: mockPostList })
   console.log('Antes da requisição feita')
   console.log(wrapper.html())
@@ -19,7 +20,6 @@ it('loads posts on button click', async () => {
 
   expect(axios.get).toHaveBeenCalledTimes(1)
   expect(axios.get).toHaveBeenCalledWith('https://jsonplaceholder.typicode.com/todos')
-  expect(mockedFetch.get).toHaveBeenCalledTimes(1)
 
   await flushPromises()
 
