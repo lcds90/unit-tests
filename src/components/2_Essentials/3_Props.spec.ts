@@ -1,6 +1,6 @@
-import { mount } from '@vue/test-utils';
-import { describe, expect, it } from 'vitest';
-import Password from './3_Props.vue';
+import { mount } from '@vue/test-utils'
+import { describe, expect, it } from 'vitest'
+import Password from './3_Props.vue'
 
 describe('props test', () => {
   it('renders an error if length is too short', async () => {
@@ -13,7 +13,7 @@ describe('props test', () => {
         greeting: false,
       },
     })
-    await wrapper.get('input').setValue('short');
+    await wrapper.get('input').setValue('short')
     console.log(wrapper.html())
     expect(wrapper.html()).toContain('Password must be at least 10 characters')
     // LINK https://test-utils.vuejs.org/guide/essentials/conditional-rendering.html#Using-isVisible-
@@ -29,7 +29,7 @@ describe('props test', () => {
       },
     })
 
-    await wrapper.get('input').setValue('validpassword');
+    await wrapper.get('input').setValue('validpassword')
     expect(wrapper.html()).not.toContain('Password must be at least 10 characters')
     expect(wrapper.find('[data-test="greeting"]').exists()).toBeFalsy()
 
@@ -38,4 +38,3 @@ describe('props test', () => {
     expect(wrapper.find('[data-test="greeting"]').exists()).toBeTruthy()
   })
 })
-

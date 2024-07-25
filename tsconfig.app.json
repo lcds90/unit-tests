@@ -23,5 +23,13 @@
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true
   },
-  "include": ["src/**/*.ts", "src/**/*.tsx", "src/components/**/*.vue", "src/vue-shims.d.ts", "src/components/**/*.spec.ts", "vitest/importMeta", "src"]
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.tsx",
+    "src/components/**/*.vue",
+    "src/vue-shims.d.ts",
+    "src/components/**/*.spec.ts",
+    "vitest/importMeta",
+    "src"
+  ]
 }

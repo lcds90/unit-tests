@@ -8,14 +8,14 @@ import axios from 'axios'
 
 const mockPostList = [
   { id: 1, title: 'title1' },
-  { id: 2, title: 'title2' }
+  { id: 2, title: 'title2' },
 ]
 vi.mock('axios')
 
 it('loads posts on button click', async () => {
   const wrapper = mount(PostList)
   const mockedFetch = vi.mocked(axios, true)
-  
+
   mockedFetch.get.mockResolvedValue({ data: mockPostList })
   console.log('Antes da requisição feita')
   console.log(wrapper.html())

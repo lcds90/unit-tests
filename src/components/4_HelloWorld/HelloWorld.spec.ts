@@ -1,5 +1,5 @@
 import { mount } from '@vue/test-utils'
-import HelloWorld from './HelloWorld.vue';
+import HelloWorld from './HelloWorld.vue'
 import { describe, expect, it } from 'vitest'
 
 describe('Hello World tests', () => {
@@ -7,7 +7,7 @@ describe('Hello World tests', () => {
     const wrapper = mount(HelloWorld)
     const selectors = {
       paragraph: '[data-track="paragraph"]',
-      button: '[data-track="count"]'
+      button: '[data-track="count"]',
     }
     console.log(wrapper.html())
     const button = wrapper.find(selectors.button)
@@ -23,6 +23,5 @@ describe('Hello World tests', () => {
     const wrapper = mount(HelloWorld, { props: { msg: 'batata' } })
     console.log(wrapper.html())
     expect(wrapper.find('h1').text()).toBe('batata')
-
   })
 })
