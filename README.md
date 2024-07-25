@@ -44,7 +44,7 @@ export default defineConfig({
 
 ![environments](images/environment.png)
 
-[Sobre environments](https://vitest.dev/config/#environment)
+[Sobre environments](https://vitest.dev/guide/environment.html)
 > Como vue compila uma aplicação web, podemos utilizar jsdom ou happy-dom.
 
 ### 🎯 Executando Testes
@@ -124,3 +124,9 @@ A API de "expect" é utilizada para o resultado esperado do componente.
 ---
 
 # Referências
+[Easy to test](https://test-utils.vuejs.org/guide/essentials/easy-to-test.html)
+[Vue Test Utils](https://test-utils.vuejs.org/guide/)
+[Vitest](https://vitest.dev/api/)
+
+[Testes com pinia](https://pinia.vuejs.org/cookbook/testing.html)
+[Testes com vue router](https://test-utils.vuejs.org/guide/advanced/vue-router)

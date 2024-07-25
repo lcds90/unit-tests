@@ -3,6 +3,9 @@ import PostList from './axiosExample.vue'
 import { expect, it, vi } from 'vitest'
 import axios from 'axios'
 
+// LINK https://test-utils.vuejs.org/guide/advanced/http-requests.html
+// LINK https://runthatline.com/category/tutorials/unit-testing/
+
 const mockPostList = [
   { id: 1, title: 'title1' },
   { id: 2, title: 'title2' }

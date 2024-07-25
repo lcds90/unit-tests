@@ -4,8 +4,9 @@ import Password from './3_Props.vue';
 
 describe('props test', () => {
   it('renders an error if length is too short', async () => {
-    // LINK https://test-utils.vuejs.org/guide/essentials/conditional-rendering.html#Finding-Elements
     // LINK https://test-utils.vuejs.org/guide/essentials/passing-data.html
+    // LINK https://test-utils.vuejs.org/guide/essentials/conditional-rendering.html#Finding-Elements
+
     const wrapper = mount(Password, {
       props: {
         minLength: 10,
@@ -15,6 +16,7 @@ describe('props test', () => {
     await wrapper.get('input').setValue('short');
     console.log(wrapper.html())
     expect(wrapper.html()).toContain('Password must be at least 10 characters')
+    // LINK https://test-utils.vuejs.org/guide/essentials/conditional-rendering.html#Using-isVisible-
     expect(wrapper.find('[data-test="error"]').isVisible()).toBeTruthy()
     expect(wrapper.find('[data-test="error"]').classes()).toContain('has-text-danger')
   })
